@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghani Fadilah - Web Developer &amp; Cyber Security</title>
+  <meta name="description" content="Profil pribadi, latar belakang, keahlian Web Development dan Cyber Security, serta portofolio Ghani Fadilah." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <!-- Top Navigation Bar -->
+    <header class="topbar">
+      <a href="#beranda" class="wordmark" data-nav="beranda">
+        <span class="wordmark-mark" aria-hidden="true"></span>
+        <span>Ghani Fadilah</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navigasi halaman" role="tablist">
+        <button class="nav-link is-active" type="button" role="tab" aria-selected="true" data-nav="beranda">Beranda</button>
+        <button class="nav-link" type="button" role="tab" aria-selected="false" data-nav="tentang">Tentang Saya</button>
+        <button class="nav-link" type="button" role="tab" aria-selected="false" data-nav="keahlian">Keahlian</button>
+        <button class="nav-link" type="button" role="tab" aria-selected="false" data-nav="portofolio">Portofolio</button>
+      </nav>
+
+      <div class="topbar-actions">
+        <a
+          class="btn-nav-wa"
+          href="https://wa.me/6285163019551?text=Halo%20Ghani%2C%20saya%20melihat%20profil%20Anda%20dan%20ingin%20terhubung."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+          </svg>
+          <span>Hubungi WhatsApp</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="7" x2="20" y2="7" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="17" x2="20" y2="17" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Navigasi mobile" hidden>
+      <button class="mobile-nav-link is-active" type="button" data-nav="beranda">Beranda</button>
+      <button class="mobile-nav-link" type="button" data-nav="tentang">Tentang Saya</button>
+      <button class="mobile-nav-link" type="button" data-nav="keahlian">Keahlian</button>
+      <button class="mobile-nav-link" type="button" data-nav="portofolio">Portofolio</button>
+    </nav>
+
+    <main class="main-stage">
+      <!-- PAGE 1: BERANDA / HERO -->
+      <section id="view-beranda" class="view is-active" role="tabpanel" aria-labelledby="tab-beranda">
+        <div class="hero-split">
+          <div class="hero-copy">
+            <div class="availability">
+              <span class="live-dot" aria-hidden="true"></span>
+              <span>Terbuka untuk diskusi, bertukar wawasan, dan kolaborasi IT</span>
+            </div>
+
+            <div class="hero-titles">
+              <h1>Ghani Fadilah</h1>
+              <p class="hero-role">Web Developer &amp; Cyber Security</p>
+            </div>
+
+            <!-- Interactive Hero Focus Switcher -->
+            <div class="hero-focus-wrap">
+              <div class="hero-focus-tabs" role="tablist" aria-label="Pilih fokus profil">
+                <button class="focus-tab is-active" type="button" role="tab" aria-selected="true" data-focus="all">Ringkas</button>
+                <button class="focus-tab" type="button" role="tab" aria-selected="false" data-focus="web">Web Development</button>
+                <button class="focus-tab" type="button" role="tab" aria-selected="false" data-focus="security">Cyber Security</button>
+              </div>
+
+              <p id="hero-summary-text" class="hero-summary">
+                Mahasiswa IT yang senang mengeksplorasi pengembangan aplikasi web modern dan keamanan
+                siber, mulai dari merancang antarmuka yang rapi hingga memahami cara kerja keamanan sistem.
+              </p>
+
+              <div class="hero-topic-pills" aria-label="Pintasan topik keahlian">
+                <button class="topic-pill" type="button" data-topic="web" data-goto="keahlian" data-skill-filter="web">Laravel</button>
+                <button class="topic-pill" type="button" data-topic="web" data-goto="keahlian" data-skill-filter="web">React</button>
+                <button class="topic-pill" type="button" data-topic="web" data-goto="keahlian" data-skill-filter="web">HTML, CSS &amp; JS</button>
+                <button class="topic-pill" type="button" data-topic="security" data-goto="keahlian" data-skill-filter="security">OWASP Top 10</button>
+                <button class="topic-pill" type="button" data-topic="security" data-goto="tentang">Bug Bounty &amp; CTF</button>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a
+                id="hero-wa-cta"
+                class="btn-primary"
+                href="https://wa.me/6285163019551?text=Halo%20Ghani%2C%20saya%20melihat%20halaman%20profil%20Anda%20dan%20ingin%20terhubung."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                <span id="hero-wa-label">Kirim Pesan WhatsApp</span>
+              </a>
+
+              <button class="btn-secondary" type="button" data-nav="portofolio">
+                Lihat Karya Pilihan
+              </button>
+            </div>
+          </div>
+
+          <aside id="portrait-card" class="portrait-card" aria-label="Foto profil Ghani Fadilah">
+            <div class="portrait-media">
+              <img src="assets/foto-ghani.png" alt="Foto profil Ghani Fadilah" class="portrait-img" />
+              <div id="portrait-overlay" class="portrait-overlay" hidden>
+                <p class="overlay-kicker">Profil Singkat</p>
+                <ul class="overlay-facts">
+                  <li><strong>Kampus</strong><span>Politeknik Negeri Madiun</span></li>
+                  <li><strong>Fokus</strong><span>Web Dev &amp; Cyber Security</span></li>
+                  <li><strong>Minat</strong><span>Bug Bounty &amp; CTF</span></li>
+                  <li><strong>Domisili</strong><span>Madiun</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="portrait-caption">
+              <span id="portrait-status" class="caption-left">Mahasiswa IT · Semester 5</span>
+              <button id="portrait-toggle" class="caption-toggle" type="button" aria-expanded="false" aria-controls="portrait-overlay">
+                Info Singkat
+              </button>
+            </div>
+          </aside>
+        </div>
+
+        <div class="editorial-index" aria-label="Pintasan bagian profil">
+          <button class="index-item" type="button" data-nav="tentang">
+            <div class="index-head">
+              <span class="index-title">Tentang Saya</span>
+              <svg class="index-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </div>
+            <span class="index-sub">Latar belakang pendidikan, minat keamanan siber &amp; web</span>
+          </button>
+          <button class="index-item" type="button" data-nav="keahlian">
+            <div class="index-head">
+              <span class="index-title">Keahlian &amp; Tools</span>
+              <svg class="index-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </div>
+            <span class="index-sub">Laravel, React, HTML/CSS/JS, OWASP &amp; security testing</span>
+          </button>
+          <button class="index-item" type="button" data-nav="portofolio">
+            <div class="index-head">
+              <span class="index-title">Portofolio &amp; Sertifikat</span>
+              <svg class="index-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </div>
+            <span class="index-sub">Proyek web, lab keamanan &amp; sertifikasi</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- PAGE 2: TENTANG SAYA -->
+      <section id="view-tentang" class="view" role="tabpanel" hidden>
+        <div class="about-split">
+          <div class="about-story">
+            <h2>Tentang saya.</h2>
+            <p class="about-narrative">
+              Saya Ghani Fadilah, mahasiswa Teknologi Informasi di Politeknik Negeri Madiun yang mendalami
+              Web Development dengan Laravel dan React sekaligus Cyber Security. Ketertarikan saya berawal
+              dari rasa ingin tahu tentang cara kerja sistem di balik layar, mulai dari membangun antarmuka
+              web yang rapi hingga mengeksplorasi pengujian celah keamanan lewat latihan Bug Bounty dan
+              Capture The Flag.
+            </p>
+
+            <div class="interest-explorer">
+              <p class="explorer-hint">Pilih topik minat untuk melihat detail eksplorasi saya</p>
+              <div class="interest-tags" role="tablist" aria-label="Minat dan hobi">
+                <button class="interest-pill is-active" type="button" role="tab" aria-selected="true" data-interest="web">Web Development</button>
+                <button class="interest-pill" type="button" role="tab" aria-selected="false" data-interest="security">Cyber Security</button>
+                <button class="interest-pill" type="button" role="tab" aria-selected="false" data-interest="bounty">Bug Bounty</button>
+                <button class="interest-pill" type="button" role="tab" aria-selected="false" data-interest="ctf">Capture The Flag (CTF)</button>
+              </div>
+
+              <div class="interest-detail-card" role="tabpanel">
+                <p id="interest-detail-title" class="interest-detail-title">Web Development</p>
+                <p id="interest-detail-copy" class="interest-detail-copy">
+                  Membangun aplikasi web dengan struktur kode yang rapi menggunakan Laravel untuk sisi
+                  backend serta React untuk antarmuka yang dinamis dan responsif.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-surface">
+            <div class="about-surface-top">
+              <div class="surface-tabs" role="tablist" aria-label="Detail profil">
+                <button class="surface-tab is-active" type="button" role="tab" aria-selected="true" data-about-tab="education">Riwayat Pendidikan</button>
+                <button class="surface-tab" type="button" role="tab" aria-selected="false" data-about-tab="approach">Fokus &amp; Pendekatan</button>
+              </div>
+            </div>
+
+            <div id="about-panel-education" class="about-panel">
+              <div class="timeline">
+                <button class="timeline-card is-open" type="button" aria-expanded="true">
+                  <div class="timeline-row">
+                    <span class="timeline-dot is-current" aria-hidden="true"></span>
+                    <div class="timeline-main">
+                      <p class="timeline-school">Politeknik Negeri Madiun</p>
+                      <p class="timeline-meta">Teknologi Informasi / Teknik · Semester 5</p>
+                    </div>
+                    <svg class="timeline-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </div>
+                  <p class="timeline-detail">
+                    Mendalami rekayasa perangkat lunak web, basis data, jaringan komputer, serta dasar
+                    keamanan sistem informasi.
+                  </p>
+                </button>
+
+                <button class="timeline-card" type="button" aria-expanded="false">
+                  <div class="timeline-row">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="timeline-main">
+                      <p class="timeline-school">SMK AL BAHRI</p>
+                      <p class="timeline-meta">2019 hingga 2022</p>
+                    </div>
+                    <svg class="timeline-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </div>
+                  <p class="timeline-detail">
+                    Membangun fondasi awal di bidang teknologi komputer, pemrograman dasar, dan pemahaman
+                    jaringan.
+                  </p>
+                </button>
+              </div>
+            </div>
+
+            <div id="about-panel-approach" class="about-panel" hidden>
+              <div class="approach-list">
+                <div class="approach-item">
+                  <span class="approach-icon" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="16 18 22 12 16 6" />
+                      <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="approach-item-title">Pengembangan Web Modern</p>
+                    <p class="approach-copy">
+                      Menggunakan Laravel dan React dengan struktur komponen yang bersih serta tampilan
+                      responsif di berbagai ukuran layar.
+                    </p>
+                  </div>
+                </div>
+
+                <hr class="hairline" />
+
+                <div class="approach-item">
+                  <span class="approach-icon" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <p class="approach-item-title">Pola Pikir Cyber Security</p>
+                    <p class="approach-copy">
+                      Mengutamakan keamanan sejak tahap perancangan, melakukan analisis kerentanan dasar,
+                      serta mencegah celah keamanan umum pada aplikasi web.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE 3: KEAHLIAN -->
+      <section id="view-keahlian" class="view" role="tabpanel" hidden>
+        <div class="view-header-row">
+          <div>
+            <h2>Keahlian &amp; tools.</h2>
+            <p class="view-subtitle">Kompetensi pengembangan web dan keamanan siber yang terus saya pelajari dan terapkan.</p>
+          </div>
+
+          <div class="segmented-filter" role="group" aria-label="Filter kategori keahlian">
+            <button class="filter-btn is-active" type="button" data-filter="all">Semua</button>
+            <button class="filter-btn" type="button" data-filter="web">Web Development</button>
+            <button class="filter-btn" type="button" data-filter="security">Cyber Security</button>
+          </div>
+        </div>
+
+        <div id="skills-matrix" class="skills-matrix">
+          <article class="skill-panel" data-category="web">
+            <div class="panel-header">
+              <div class="panel-title-row">
+                <span class="panel-icon" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                </span>
+                <div>
+                  <h3>Pengembangan Web</h3>
+                  <p>Klik baris keahlian untuk melihat tools dan detail fokusnya</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="skill-row is-highlighted" type="button" data-skill-key="laravel">
+              <div class="skill-row-top">
+                <span class="skill-name">Laravel (PHP &amp; Fullstack Web)</span>
+                <span class="skill-level">86%</span>
+              </div>
+              <p class="skill-desc">Arsitektur MVC, Eloquent ORM, REST API, autentikasi aman, dan pengelolaan database.</p>
+              <div class="skill-bar-track"><span class="skill-bar-fill" style="--level: 86%"></span></div>
+            </button>
+
+            <button class="skill-row" type="button" data-skill-key="react">
+              <div class="skill-row-top">
+                <span class="skill-name">React (Component &amp; Modern UI)</span>
+                <span class="skill-level">84%</span>
+              </div>
+              <p class="skill-desc">Membangun antarmuka interaktif berbasis komponen, hooks, state management, dan integrasi API.</p>
+              <div class="skill-bar-track"><span class="skill-bar-fill" style="--level: 84%"></span></div>
+            </button>
+
+            <button class="skill-row" type="button" data-skill-key="frontend">
+              <div class="skill-row-top">
+                <span class="skill-name">HTML5, CSS3, JavaScript &amp; Git</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <p class="skill-desc">Struktur web semantik, tata letak responsif, manipulasi DOM, serta kontrol versi GitHub.</p>
+              <div class="skill-bar-track"><span class="skill-bar-fill" style="--level: 90%"></span></div>
+            </button>
+          </article>
+
+          <article class="skill-panel" data-category="security">
+            <div class="panel-header">
+              <div class="panel-title-row">
+                <span class="panel-icon is-sky" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  </svg>
+                </span>
+                <div>
+                  <h3>Keamanan Siber (Cyber Security)</h3>
+                  <p>Analisis kerentanan, pengamanan aplikasi, dan dasar jaringan</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="skill-row" type="button" data-skill-key="owasp">
+              <div class="skill-row-top">
+                <span class="skill-name">Web Application Security (OWASP)</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <p class="skill-desc">Pemahaman dan pencegahan celah XSS, SQL Injection, CSRF, serta konfigurasi security headers.</p>
+              <div class="skill-bar-track"><span class="skill-bar-fill is-sky" style="--level: 90%"></span></div>
+            </button>
+
+            <button class="skill-row" type="button" data-skill-key="network">
+              <div class="skill-row-top">
+                <span class="skill-name">Network &amp; Linux Fundamentals</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <p class="skill-desc">Dasar protokol jaringan, manajemen permission Linux, dan hardening layanan server.</p>
+              <div class="skill-bar-track"><span class="skill-bar-fill is-sky" style="--level: 90%"></span></div>
+            </button>
+
+            <button class="skill-row" type="button" data-skill-key="testing">
+              <div class="skill-row-top">
+                <span class="skill-name">Security Testing &amp; Reconnaissance</span>
+                <span class="skill-level">90%</span>
+              </div>
+              <p class="skill-desc">Pengujian celah keamanan dasar menggunakan Burp Suite, Nmap, dan audit browser DevTools.</p>
+              <div class="skill-bar-track"><span class="skill-bar-fill is-sky" style="--level: 90%"></span></div>
+            </button>
+          </article>
+        </div>
+
+        <!-- Interactive Skill Detail Inspector -->
+        <aside id="skill-inspector" class="skill-inspector" aria-live="polite">
+          <div class="inspector-main">
+            <span id="inspector-badge" class="featured-pill">Web Development · 86%</span>
+            <h3 id="inspector-title">Laravel (PHP &amp; Fullstack Web)</h3>
+            <p id="inspector-note">
+              Mengembangkan aplikasi web end-to-end dengan pola MVC, validasi request yang aman,
+              proteksi CSRF bawaan, serta relasi basis data menggunakan Eloquent ORM.
+            </p>
+            <div id="inspector-tools" class="inspector-tools">
+              <span>PHP 8</span>
+              <span>Eloquent ORM</span>
+              <span>Blade</span>
+              <span>Laravel Sanctum</span>
+              <span>MySQL</span>
+            </div>
+          </div>
+
+          <button class="btn-secondary inspector-btn" type="button" data-nav="portofolio">
+            Lihat di Portofolio
+          </button>
+        </aside>
+      </section>
+
+      <!-- PAGE 4: PORTOFOLIO -->
+      <section id="view-portofolio" class="view" role="tabpanel" hidden>
+        <div class="view-header-row">
+          <div>
+            <h2>Karya &amp; sertifikat.</h2>
+            <p class="view-subtitle">Proyek web mandiri, kontribusi tim, dan sertifikasi yang sudah saya kerjakan.</p>
+          </div>
+
+          <div class="segmented-filter" role="group" aria-label="Filter karya portofolio">
+            <button class="port-filter-btn is-active" type="button" data-port-filter="all">Semua</button>
+            <button class="port-filter-btn" type="button" data-port-filter="mandiri">Mandiri</button>
+            <button class="port-filter-btn" type="button" data-port-filter="tim">Tim</button>
+            <button class="port-filter-btn" type="button" data-port-filter="sertifikat">Sertifikat</button>
+          </div>
+        </div>
+
+        <article class="featured-project portfolio-item" data-port-cat="mandiri">
+          <button
+            class="featured-media-btn"
+            type="button"
+            aria-label="Lihat pratinjau RambosStore"
+            data-project="RambosStore"
+            data-project-cat="Dikerjakan Mandiri · React.js &amp; Supabase"
+            data-project-img="assets/Rambosstore-porto.png"
+            data-project-desc="Online shop (olshop) untuk berbagai produk digital seperti voucher game, layanan streaming, dan AI tools. Seluruh sistem dikerjakan mandiri mulai dari etalase pencarian, filter kategori, keranjang belanja, alur pemesanan, hingga riwayat transaksi dengan arsitektur serverless Supabase."
+            data-project-stack="React.js, Supabase (Serverless), Auth &amp; Database"
+          >
+            <img src="assets/Rambosstore-porto.png" alt="Tampilan aplikasi web RambosStore" class="featured-img" />
+          </button>
+
+          <div class="featured-body">
+            <div class="port-badges">
+              <span class="featured-pill">Dikerjakan Mandiri</span>
+              <span class="port-role-tag">Fullstack Web</span>
+            </div>
+            <h3>RambosStore</h3>
+            <p>
+              Online shop (olshop) untuk produk digital seperti voucher game, layanan streaming, dan
+              AI tools. Dibangun menyeluruh mulai dari etalase produk, pencarian, keranjang belanja,
+              proses pemesanan, hingga riwayat transaksi berbasis serverless.
+            </p>
+            <div class="port-tech-list">
+              <span>React.js</span>
+              <span>Supabase (Serverless)</span>
+            </div>
+            <div class="featured-meta">
+              <span>Online shop produk digital</span>
+              <button
+                class="btn-primary btn-sm"
+                type="button"
+                data-project="RambosStore"
+                data-project-cat="Dikerjakan Mandiri · React.js &amp; Supabase"
+                data-project-img="assets/Rambosstore-porto.png"
+                data-project-desc="Online shop (olshop) untuk berbagai produk digital seperti voucher game, layanan streaming, dan AI tools. Seluruh sistem dikerjakan mandiri mulai dari etalase pencarian, filter kategori, keranjang belanja, alur pemesanan, hingga riwayat transaksi dengan arsitektur serverless Supabase."
+                data-project-stack="React.js, Supabase (Serverless), Auth &amp; Database"
+              >
+                Lihat pratinjau
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <div id="portfolio-grid" class="portfolio-grid">
+          <button
+            class="port-card portfolio-item"
+            type="button"
+            data-port-cat="mandiri"
+            data-project="Clipbos AI"
+            data-project-cat="Dikerjakan Mandiri · AI Video Clipper"
+            data-project-img="assets/ClipperAI-porto.png"
+            data-project-desc="Alat pemotong video otomatis berbasis AI yang mengubah tautan YouTube menjadi beberapa klip vertikal siap unggah. Dilengkapi pengaturan jumlah klip, batas durasi, transkrip, gaya subtitle dinamis, serta mode AI Face Focus."
+            data-project-stack="AI Automation, Video Processing, Web Dashboard"
+          >
+            <div class="port-thumb">
+              <img src="assets/ClipperAI-porto.png" alt="Tampilan dashboard Clipbos AI" loading="lazy" />
+            </div>
+            <div class="port-card-body">
+              <div class="port-badges">
+                <span class="featured-pill">Dikerjakan Mandiri</span>
+              </div>
+              <h3>Clipbos AI</h3>
+              <p class="port-desc">
+                Alat pemotong video otomatis dari tautan YouTube menjadi klip pendek vertikal dengan
+                transkrip, subtitle, dan mode AI Face Focus.
+              </p>
+              <div class="port-tech-list">
+                <span>AI Clipper</span>
+                <span>Otomatisasi Video</span>
+              </div>
+            </div>
+          </button>
+
+          <button
+            class="port-card portfolio-item"
+            type="button"
+            data-port-cat="tim"
+            data-project="ERP Spinotek"
+            data-project-cat="Kolaborasi Tim · Laravel"
+            data-project-img="assets/ERP-porto.png"
+            data-project-desc="Sistem workspace internal untuk pengelolaan data operasional, proyek, kontak, modul pengajuan PPBJ, serta laporan pertanggungjawaban lintas divisi. Saya berkontribusi bersama tim dalam pengembangan fitur menggunakan Laravel."
+            data-project-stack="Laravel, PHP, Kolaborasi Tim"
+          >
+            <div class="port-thumb">
+              <img src="assets/ERP-porto.png" alt="Tampilan sistem ERP Spinotek" loading="lazy" />
+            </div>
+            <div class="port-card-body">
+              <div class="port-badges">
+                <span class="port-pill-muted">Kolaborasi Tim</span>
+              </div>
+              <h3>ERP Spinotek</h3>
+              <p class="port-desc">
+                Workspace internal perusahaan untuk modul proyek, PPBJ, kontak, dan laporan operasional.
+                Dikembangkan bersama tim menggunakan Laravel.
+              </p>
+              <div class="port-tech-list">
+                <span>Laravel</span>
+                <span>Pengembangan Tim</span>
+              </div>
+            </div>
+          </button>
+
+          <button
+            class="port-card portfolio-item"
+            type="button"
+            data-port-cat="sertifikat"
+            data-project="Sertifikat Network Fundamental"
+            data-project-cat="Sertifikat · Aguna Course"
+            data-project-img="assets/Sertif-porto.jpg"
+            data-project-desc="Sertifikat kelulusan kursus Network Fundamental dari Aguna Course yang diterbitkan pada 28 Juni 2025 dengan nomor sertifikat AC-436-61789875-75."
+            data-project-stack="Aguna Course, 28 Juni 2025, No. AC-436-61789875-75"
+            data-project-url="https://agunacourse.com/cek-sertifikat"
+            data-project-url-label="Verifikasi Sertifikat"
+          >
+            <div class="port-thumb is-cert">
+              <img src="assets/Sertif-porto.jpg" alt="Sertifikat Network Fundamental Aguna Course atas nama Ghani Fadilah" loading="lazy" />
+            </div>
+            <div class="port-card-body">
+              <div class="port-badges">
+                <span class="port-pill-sky">Sertifikat</span>
+              </div>
+              <h3>Network Fundamental</h3>
+              <p class="port-desc">
+                Kelulusan kursus dasar jaringan komputer di Aguna Course, diterbitkan pada 28 Juni 2025
+                (No. AC-436-61789875-75).
+              </p>
+              <div class="port-tech-list">
+                <span>Aguna Course</span>
+                <span>Juni 2025</span>
+              </div>
+            </div>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom WhatsApp CTA Footer (Selalu tampil di bagian paling bawah halaman) -->
+    <footer class="bottom-cta-bar">
+      <div class="bottom-cta-copy">
+        <p class="cta-lead">Ingin berkenalan, bertukar pikiran, atau terhubung lebih lanjut?</p>
+        <p class="cta-sub">© 2026 Ghani Fadilah · Web Developer &amp; Cyber Security</p>
+      </div>
+
+      <a
+        class="btn-wa-cta"
+        href="https://wa.me/6285163019551?text=Halo%20Ghani%2C%20saya%20melihat%20profil%20Anda%20dan%20ingin%20terhubung%20lebih%20lanjut."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        </svg>
+        <span>Hubungi Saya via WhatsApp</span>
+      </a>
+    </footer>
+  </div>
+
+  <!-- Interactive Project Detail Modal -->
+  <div id="project-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-card">
+      <div class="modal-top">
+        <span id="modal-cat" class="featured-pill"></span>
+        <button id="modal-close" class="modal-close" type="button" aria-label="Tutup pratinjau">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div id="modal-preview" class="modal-preview" hidden>
+        <img id="modal-image" src="" alt="" />
+      </div>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc" class="modal-desc"></p>
+      <div id="modal-stack" class="port-tech-list"></div>
+      <div class="modal-actions">
+        <a
+          id="modal-ext-link"
+          class="btn-secondary"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          hidden
+        ></a>
+        <a
+          class="btn-primary"
+          href="https://wa.me/6285163019551?text=Halo%20Ghani%2C%20saya%20ingin%20bertanya%20tentang%20karya%20di%20portofolio%20Anda."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Tanya Lebih Lanjut via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
